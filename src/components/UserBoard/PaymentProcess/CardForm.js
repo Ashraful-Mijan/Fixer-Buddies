@@ -37,9 +37,9 @@ const CardForm = ({ handlePayment }) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <CardElement />
-        <button type="submit" disabled={!stripe}>
+      <form className="bg-dark text-white w-50 p-3 rounded" onSubmit={handleSubmit}>
+        <CardElement className="bg-light text-light py-2" />
+        <button className='btn btn-primary mt-3' type="submit" disabled={!stripe}>
           Pay
       </button>
       </form>

@@ -32,7 +32,7 @@ const RepairBrands = () => {
                     <div className="col-md-8 d-flex justify-content-center">
                         {
                             brandsData.map(data => {
-                                return <div className='d-flex ps-3 border border-warning me-3 p-3 mx-auto'>
+                                return <div key={data.icon} className='d-flex ps-3 border border-warning me-3 p-3 mx-auto'>
                                     <img className="w-50 mx-auto" src={data.icon} alt="" />
                                 </div>
                             })

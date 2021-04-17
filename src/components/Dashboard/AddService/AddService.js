@@ -40,23 +40,23 @@ const AddService = () => {
     return (
         <div className='p-3 w-100 h-100' >
             <form onSubmit={handleSubmit(onSubmit)} className='w-75 mx-auto p-5 rounded text-light fw-bold' style={{ backgroundColor: '#1D3548' }}>
-                <div class="mb-3">
-                    <label for="serviceTitle" class="form-label">Service Title</label>
-                    <input type="text" name='serviceTitle' class="form-control" ref={register} />
+                <div className="mb-3">
+                    <label for="serviceTitle" className="form-label">Service Title</label>
+                    <input type="text" name='serviceTitle' className="form-control" ref={register} />
                 </div>
-                <div class="mb-3">
-                    <label for="description" class="form-label">Description</label>
-                    <input type="text" name="description" class="form-control" ref={register} />
+                <div className="mb-3">
+                    <label for="description" className="form-label">Description</label>
+                    <input type="text" name="description" className="form-control" ref={register} />
                 </div>
-                <div class="mb-3">
-                    <label for="price" class="form-label">Price</label>
-                    <input type="text" name="price" class="form-control" ref={register} />
+                <div className="mb-3">
+                    <label for="price" className="form-label">Price</label>
+                    <input type="text" name="price" className="form-control" ref={register} />
                 </div>
-                <div class="mb-3">
-                    <label for="icon" class="form-label">Icon</label>
-                    <input onChange={imageUpload} type="file" name="icon" class="form-control" />
+                <div className="mb-3">
+                    <label for="icon" className="form-label">Icon</label>
+                    <input onChange={imageUpload} type="file" name="icon" className="form-control" />
                 </div>
-                <button type="submit" class={`btn btn-primary ${imageURL ? '' : 'disabled'}`}>Submit</button>
+                <button type="submit" className={`btn btn-primary ${imageURL ? '' : 'disabled'}`}>Submit</button>
             </form>
         </div>
     );

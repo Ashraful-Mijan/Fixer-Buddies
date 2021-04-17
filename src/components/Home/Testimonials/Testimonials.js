@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Testimonial from '../Testimonial/Testimonial';
+import './Testimonials.css'
 
 const Testimonials = () => {
     const [testimonials, setTestimonials] = useState([])
@@ -9,11 +10,11 @@ const Testimonials = () => {
             .then(data => setTestimonials(data))
     }, [])
     return (
-        <section className="py-5">
+        <section className="testimonials pt-5 pb-2 mb-3">
             <div>
-                <div className='text-center text-muted'>
+                <div className='text-center text-light'>
                     <h2 className='fw-bold fs-1'>Testimonials</h2>
-                    <hr className='text-center mx-auto' style={{ width: '40px', height: '6px', color: 'orange' }} />
+                    <hr className='text-center mx-auto text-light' style={{ width: '40px', height: '6px'}} />
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, sit.
                     </p>

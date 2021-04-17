@@ -5,12 +5,12 @@ import { UserContext } from '../../../App';
 const Nav = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     return (
-        <nav class="navbar navbar-light bg-dark">
-            <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">
+        <nav className="navbar navbar-light bg-dark">
+            <div className="container-fluid">
+                <span className="navbar-brand mb-0 h1">
                     <Link className="text-uppercase text-white text-decoration-none" to="/"><span className="text-warning">Fixer</span> Buddies</Link>
                 </span>
-                <span class="navbar-brand mb-0 text-light">
+                <span className="navbar-brand mb-0 text-light">
                     <img src={loggedInUser.image} alt="" className="w-50 rounded-circle"/>
                     
                 </span>

@@ -4,9 +4,9 @@ const Team = ({ team }) => {
     const { name, position, imgLink } = team;
     return (
         <div className="col-md-3 mb-3">
-            <div class="card border-0 shadow-sm h-100">
+            <div className="card border-0 shadow-sm h-100">
                 <div>
-                    <img src={imgLink} class="card-img-top w-100" alt="..." />
+                    <img src={imgLink} className="card-img-top w-100" alt="..." />
                 </div>
                 <div className="bg-light text-center p-3">
                     <h4 className='card-text '>{name}</h4>

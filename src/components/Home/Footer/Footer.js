@@ -26,17 +26,17 @@ const Footer = () => {
                         </div>
                         <div className="col-md-4 mb-2">
                             <h3 className="py-3 ps-3">CONTACT US</h3>
-                            <ul class="list-group list-group-flush ">
-                                <li style={{ background: 'none' }} class="list-group-item text-white">
+                            <ul className="list-group list-group-flush ">
+                                <li style={{ background: 'none' }} className="list-group-item text-white">
                                     support-us@rgeeks.com
                                 <br />
                                 helpmenow@rgeeks.com
                             </li>
-                                <li style={{ background: 'none' }} class="list-group-item text-white">
+                                <li style={{ background: 'none' }} className="list-group-item text-white">
                                     Road-2,3/A East Shibgonj<br />
                                 Sylhet-3100, Bangladesh
                             </li>
-                                <li style={{ background: 'none' }} class="list-group-item text-white">
+                                <li style={{ background: 'none' }} className="list-group-item text-white">
                                     Office:  (+880) 0823 560 433
                                 <br />
                                 Cell:  (+880) 0723 161 343
@@ -45,20 +45,20 @@ const Footer = () => {
                         </div>
                         <div className="col-md-4 mb-2">
                             <h3 className="py-3">OPENING HOURS</h3>
-                            <ul style={{ background: 'none' }} class="list-group list-group-flush">
-                                <li style={{ background: 'none' }} class="list-group-item d-flex justify-content-between border-dotted border-white text-white">
+                            <ul style={{ background: 'none' }} className="list-group list-group-flush">
+                                <li style={{ background: 'none' }} className="list-group-item d-flex justify-content-between border-dotted border-white text-white">
                                     <span>Sat - Tues :</span>
                                     <span>6.00 AM - 10.00 PM</span>
                                 </li>
-                                <li style={{ background: 'none' }} class="list-group-item d-flex justify-content-between border-dotted text-white border-white">
+                                <li style={{ background: 'none' }} className="list-group-item d-flex justify-content-between border-dotted text-white border-white">
                                     <span>Wed - Thurs :</span>
                                     <span>8.00 AM - 6.00 PM</span>
                                 </li>
-                                <li style={{ background: 'none' }} class="list-group-item d-flex justify-content-between border-dotted text-white border-white">
+                                <li style={{ background: 'none' }} className="list-group-item d-flex justify-content-between border-dotted text-white border-white">
                                     <span>Friday :</span>
                                     <span>6.00 AM - 10.00 PM</span>
                                 </li>
-                                <li style={{ background: 'none' }} class="list-group-item d-flex justify-content-between border-dotted text-white">
+                                <li style={{ background: 'none' }} className="list-group-item d-flex justify-content-between border-dotted text-white">
                                     <span>Sunday :</span>
                                     <span>Closed</span>
                                 </li>

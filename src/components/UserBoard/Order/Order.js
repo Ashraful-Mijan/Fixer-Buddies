@@ -12,7 +12,6 @@ const Order = ({ id }) => {
     const onSubmit = data => {
         setOrder(data)
     }
-    console.log(order)
 
     const handlePayment = id => {
         const newOrder = {...order, id}
@@ -31,7 +30,7 @@ const Order = ({ id }) => {
             .then(data => setOrderData(...data))
     }, [id])
 
-
+    console.log(order)
     return (
         <div className='p-3 w-100 h-100'>
             <div className={`${order ? 'd-none':'block'}`}>
@@ -55,7 +54,7 @@ const Order = ({ id }) => {
                     <button type="submit" className={`btn btn-primary`}>Submit</button>
                 </form>
             </div>
-            <div className='pt-3'>
+            <div className={`pt-3 ${order ? 'block':'d-none'}`}>
                 <PaymentProcess handlePayment={handlePayment} />
             </div>
         </div>

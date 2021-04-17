@@ -26,7 +26,6 @@ const Review = () => {
                 alert('review created successfully')
             }
         })
-        console.log(newReview)
     }
 
     return (

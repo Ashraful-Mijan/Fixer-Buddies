@@ -38,7 +38,7 @@ const OurTeam = () => {
                 <div className="container pb-5">
                     <div className="row">
                         {
-                            TeamData.map(team => <Team team={team} />)
+                            TeamData.map(team => <Team key={team.name} team={team} />)
                         }
                     </div>
                 </div>

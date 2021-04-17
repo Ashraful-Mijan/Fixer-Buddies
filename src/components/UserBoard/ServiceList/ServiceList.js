@@ -1,15 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../../App';
 
 const ServiceList = () => {
-    const [orders, setOrders] = useState(null)
-    useEffect(() => {
-        fetch('http://localhost:5000/getOrder')
-            .then(res => res.json())
-            .then(data => setOrders(data))
-    }, [])
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const [orders, setOrders] = useState([])
+    
+    useEffect(()=> {
+        fetch(`http://localhost:5000/userOrder/?email=${loggedInUser.email}`)
+        .then(res => res.json())
+        .then(data => setOrders(data))
+    }, [loggedInUser.email])
+
     return (
         <div className='p-5'>
-            <table class="table table-hover">
+            <table className="table table-hover">
                 <thead>
                     <tr className="bg-dark text-light">
                         <th scope="col">Name</th>
@@ -21,7 +25,7 @@ const ServiceList = () => {
                 <tbody>
                     {
                         orders.map(order => {
-                            return <tr>
+                            return <tr key={order._id}>
                                 <td>{order.name}</td>
                                 <td>{order.email}</td>
                                 <td>{order.serviceTitle}</td>

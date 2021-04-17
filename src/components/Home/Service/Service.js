@@ -13,11 +13,11 @@ const Service = ({ service }) => {
 
     return (
         <div className="col-md-3">
-            <div class="card" onClick={()=>handleOrder(`${_id}`)}>
-                <img src={imageURL} class="card-img-top img-fluid" alt="..." />
-                <div class="card-body">
-                    <h3 class="card-text">{serviceTitle}</h3>
-                    <p class="card-text text-warning fw-bold">${price}</p>
+            <div className="card" onClick={()=>handleOrder(`${_id}`)}>
+                <img src={imageURL} className="card-img-top img-fluid" alt="..." />
+                <div className="card-body">
+                    <h3 className="card-text">{serviceTitle}</h3>
+                    <p className="card-text text-warning fw-bold">${price}</p>
                 </div>
             </div>
         </div>

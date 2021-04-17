@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../../App';
 import './Navbar.css'
 const Navbar = () => {
+    const [isAdmin, setAdmin] = useState(false)
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    useEffect(() => {
+        fetch('http://localhost:5000/loginBaseEmail', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ email: loggedInUser.email })
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                setAdmin(data)
+            })
+    }, [loggedInUser.email])
+    
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-color fw-bold">
             <div className="container">
@@ -13,8 +29,9 @@ const Navbar = () => {
                     <div className="navbar-nav ms-auto ">
                         <Link className="nav-link text-white" aria-current="page" to="/">Home</Link>
                         <Link className="nav-link text-white" to="/order">Order</Link>
-                        <Link className="nav-link text-white" to="/services">Services</Link>
-                        <Link className="nav-link text-white" to="/admin">Admin</Link>
+                        { isAdmin === true && 
+                            <Link className="nav-link text-white" to="/admin">Admin</Link>
+                        }
                         <Link className="nav-link text-white" to="/login">Login</Link>
                     </div>
                 </div>
