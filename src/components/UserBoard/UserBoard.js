@@ -11,7 +11,7 @@ import {
 } from "react-router-dom";
 import Order from "./Order/Order";
 import Review from "./Review/Review";
-import ServiceList from "./ServiceList/ServiceList";
+import OrderList from "./OrderList/OrderList";
 
 function UserBoard() {
 
@@ -34,7 +34,7 @@ function UserBoard() {
             path: "/serviceList",
             exact: true,
             sidebar: () => <div>service list!</div>,
-            main: () => <ServiceList/>
+            main: () => <OrderList/>
         },
         {
             path: "/review",

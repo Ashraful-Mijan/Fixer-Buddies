@@ -17,7 +17,7 @@ const Navbar = () => {
                 setAdmin(data)
             })
     }, [loggedInUser.email])
-    
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-color fw-bold">
             <div className="container">
@@ -29,7 +29,7 @@ const Navbar = () => {
                     <div className="navbar-nav ms-auto ">
                         <Link className="nav-link text-white" aria-current="page" to="/">Home</Link>
                         <Link className="nav-link text-white" to="/order">Order</Link>
-                        { isAdmin === true && 
+                        { isAdmin &&
                             <Link className="nav-link text-white" to="/admin">Admin</Link>
                         }
                         <Link className="nav-link text-white" to="/login">Login</Link>

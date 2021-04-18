@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../../App';
 
-const ServiceList = () => {
+const OrderList = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const [orders, setOrders] = useState([])
     
@@ -39,4 +39,4 @@ const ServiceList = () => {
     );
 };
 
-export default ServiceList;
+export default OrderList;

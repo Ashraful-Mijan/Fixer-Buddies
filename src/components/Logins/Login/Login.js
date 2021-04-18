@@ -32,6 +32,7 @@ const Login = () => {
                     image: result.user.photoURL
                 }
                 setLoggedInUser(newUser)
+                storeAuthToken()
                 history.replace(from);
             }).catch((error) => {
 
@@ -39,6 +40,16 @@ const Login = () => {
                 console.log(errorMessage)
             });
     }
+
+    const storeAuthToken = () => {
+        firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
+          .then(function (idToken) {
+            sessionStorage.setItem('token', idToken);
+            history.replace(from);
+          }).catch(function (error) {
+            // Handle error
+          });
+      }
 
     return (
         <div className="container-fluid login-form d-flex align-items-center justify-content-center bg-dark">

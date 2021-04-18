@@ -24,18 +24,18 @@ function App() {
           <Route exact path='/'>
             <Home />
           </Route>
-          <Route path='/order'>
+          <PrivateRoute path='/order'>
             <Nav/>
             <UserBoard/>
-          </Route>
-          <Route path='/makeOrder/:id'>
+          </PrivateRoute>
+          <PrivateRoute path='/makeOrder/:id'>
             <Nav/>
             <UserBoard/>
-          </Route>
-          <Route path='/admin'>
+          </PrivateRoute>
+          <PrivateRoute path='/admin'>
             <Nav/>
             <Admin/>
-          </Route>
+          </PrivateRoute>
           <Route path='/login'>
             <Login />
           </Route>

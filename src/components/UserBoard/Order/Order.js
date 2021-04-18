@@ -12,7 +12,7 @@ const Order = ({ id }) => {
     const onSubmit = data => {
         setOrder(data)
     }
-
+    console.log(orderData)
     const handlePayment = id => {
         const newOrder = {...order, id}
         fetch('http://localhost:5000/addOrder', {

@@ -12,7 +12,7 @@ const Service = ({ service }) => {
     }
 
     return (
-        <div className="col-md-3">
+        <div className="col-md-3 mb-2">
             <div className="card" onClick={()=>handleOrder(`${_id}`)}>
                 <img src={imageURL} className="card-img-top img-fluid" alt="..." />
                 <div className="card-body">
