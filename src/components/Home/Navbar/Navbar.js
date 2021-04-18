@@ -28,10 +28,9 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav ms-auto ">
                         <Link className="nav-link text-white" aria-current="page" to="/">Home</Link>
-                        <Link className="nav-link text-white" to="/order">Order</Link>
-                        { isAdmin &&
-                            <Link className="nav-link text-white" to="/admin">Admin</Link>
-                        }
+                        <Link className="nav-link text-white" aria-current="page" to="/">About Us</Link>
+                        <Link className="nav-link text-white" aria-current="page" to="/">Contact Us</Link>
+                        <Link className="nav-link text-white" to="dashboard">Dashboard</Link>
                         <Link className="nav-link text-white" to="/login">Login</Link>
                     </div>
                 </div>

@@ -9,9 +9,9 @@ import {
 import Login from './components/Logins/Login/Login';
 import { createContext, useState } from 'react';
 import PrivateRoute from './components/Logins/PrivateRoute/PrivateRoute';
-import Admin from './components/Dashboard/Admin/Admin';
 import Nav from './components/Dashboard/Nav/Nav';
-import UserBoard from './components/UserBoard/UserBoard';
+// import UserBoard from './components/UserBoard/UserBoard';
+import Dashboard from './components/Dashboard/Dashboard';
 
 export const UserContext = createContext()
 
@@ -24,17 +24,14 @@ function App() {
           <Route exact path='/'>
             <Home />
           </Route>
-          <PrivateRoute path='/order'>
+          <PrivateRoute path='/dashboard'>
             <Nav/>
-            <UserBoard/>
+            <Dashboard/>
           </PrivateRoute>
           <PrivateRoute path='/makeOrder/:id'>
             <Nav/>
-            <UserBoard/>
-          </PrivateRoute>
-          <PrivateRoute path='/admin'>
-            <Nav/>
-            <Admin/>
+            {/* <UserBoard/> */}
+            <Dashboard/>
           </PrivateRoute>
           <Route path='/login'>
             <Login />
