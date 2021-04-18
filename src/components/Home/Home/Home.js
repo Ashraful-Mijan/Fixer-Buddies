@@ -1,4 +1,5 @@
 import React from 'react';
+import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import News from '../News/News';
@@ -18,6 +19,7 @@ const Home = () => {
             <OurTeam/>
             <Testimonials/>
             <News/>
+            <Contact/>
             <Footer/>
         </div>
     );

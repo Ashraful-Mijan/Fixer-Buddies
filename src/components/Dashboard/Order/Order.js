@@ -12,10 +12,11 @@ const Order = ({ id }) => {
     const onSubmit = data => {
         setOrder(data)
     }
-    console.log(orderData)
+    
+
     const handlePayment = id => {
-        const newOrder = {...order, id}
-        fetch('http://localhost:5000/addOrder', {
+        const newOrder = {...order, id, status: 'Pending'}
+        fetch('https://fathomless-river-35723.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -25,12 +26,12 @@ const Order = ({ id }) => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/getOrderData/${id}`)
+        fetch(`https://fathomless-river-35723.herokuapp.com/getOrderData/${id}`)
             .then(res => res.json())
             .then(data => setOrderData(...data))
     }, [id])
 
-    console.log(order)
+    
     return (
         <div className='p-3 w-100 h-100'>
             <div className={`${order ? 'd-none':'block'}`}>

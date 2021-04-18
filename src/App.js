@@ -30,7 +30,6 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path='/makeOrder/:id'>
             <Nav/>
-            {/* <UserBoard/> */}
             <Dashboard/>
           </PrivateRoute>
           <Route path='/login'>

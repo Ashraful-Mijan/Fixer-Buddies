@@ -1,14 +1,24 @@
 import React, { useEffect, useState } from 'react';
 
 const ServiceList = () => {
-    
+    const [status, setStatus] = useState('')
     const [orders, setOrders] = useState([])
-
+    console.log(status)
     useEffect(() => {
-        fetch('http://localhost:5000/getOrder')
+        fetch('https://fathomless-river-35723.herokuapp.com/getOrder')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
+
+    useEffect(() => {
+        fetch('https://fathomless-river-35723.herokuapp.com/update', {
+            method: 'PATCH',
+            headers: {"Content-type":"application/json"},
+            body: JSON.stringify(status) 
+        })
+            .then(res => res.json())
+            .then(data => setOrders(data))
+    }, [status])
 
     return (
         <div className='p-5'>
@@ -30,7 +40,18 @@ const ServiceList = () => {
                                 <td>{order.email}</td>
                                 <td>{order.serviceTitle}</td>
                                 <td>{order.price}</td>
-                                <td>Status</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            {order.status}
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li onClick={()=> setStatus({status : 'pending', id: order._id })}>Pending</li>
+                                            <li onClick={()=> setStatus({status : 'Done', id: order._id })}>Done</li>
+                                            <li onClick={()=> setStatus({status : 'On going', id: order._id })}>On going</li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                         })
                     }

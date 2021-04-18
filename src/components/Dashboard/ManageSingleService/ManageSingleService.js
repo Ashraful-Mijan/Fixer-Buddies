@@ -5,7 +5,7 @@ const ManageSingleService = ({ manage }) => {
     const { serviceTitle, description, price, _id } = manage;
 
     const deleteService = (id, e) => {
-        fetch(`http://localhost:5000/deleteService/${id}`, {
+        fetch(`https://fathomless-river-35723.herokuapp.com/deleteService/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

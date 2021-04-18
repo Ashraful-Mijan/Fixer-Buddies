@@ -14,7 +14,7 @@ const Review = () => {
             photo: loggedInUser.image
         }
 
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://fathomless-river-35723.herokuapp.com/addReview', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

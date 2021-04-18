@@ -5,7 +5,7 @@ import './Testimonials.css'
 const Testimonials = () => {
     const [testimonials, setTestimonials] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/getReview')
+        fetch('https://fathomless-river-35723.herokuapp.com/getReview')
             .then(res => res.json())
             .then(data => setTestimonials(data))
     }, [])

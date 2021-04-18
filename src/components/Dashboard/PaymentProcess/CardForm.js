@@ -47,7 +47,7 @@ const CardForm = ({ handlePayment }) => {
         paymentError && <p className="text-danger">{paymentError}</p>
       }
       {
-        success && <p className="text-success">Your Payment was successfully</p>
+        success && <p className="text-success">Your Payment is successfully</p>
       }
     </div>
   );

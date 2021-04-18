@@ -14,7 +14,7 @@ const AddService = () => {
             imageURL: imageURL
         }
 
-        fetch('http://localhost:5000/addServices', {
+        fetch('https://fathomless-river-35723.herokuapp.com/addServices', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

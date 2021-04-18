@@ -6,7 +6,7 @@ const Navbar = () => {
     const [isAdmin, setAdmin] = useState(false)
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     useEffect(() => {
-        fetch('http://localhost:5000/loginBaseEmail', {
+        fetch('https://fathomless-river-35723.herokuapp.com/loginBaseEmail', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })

@@ -28,7 +28,7 @@ function Dashboard() {
     const [isAdmin, setAdmin] = useState(false)
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     useEffect(() => {
-        fetch('http://localhost:5000/loginBaseEmail', {
+        fetch('https://fathomless-river-35723.herokuapp.com/loginBaseEmail', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })
@@ -104,7 +104,7 @@ function Dashboard() {
                     }}
                 >
                     <ul className='fs-5' style={{ listStyleType: "none", padding: '0' }}>
-                        { 
+                        { !isAdmin &&
                             <div>
                                 <li className='py-1'>
                                     <FaShoppingCart className="text-light me-2" />
@@ -121,9 +121,6 @@ function Dashboard() {
                             </div>
                         }
 
-
-                        <br />
-                        {/* admin */}
                         {isAdmin &&
                             <div>
                                 <li className='py-1'>
