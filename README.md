@@ -1,12 +1,23 @@
-# Assignment-11
-### Project Name: Fixer Buddies
+# Fixer Buddies
 
-# This Project create using: 
-react, bootstrap, react icon, react bootstrap, node.js, mongodb  
+Fixer Buddies is a single-page website where users can booking service to repair pars of laptop and desktop computer like RAM , HDD, Processor, Display Repair
 
-# Student Contact
-###### Mobile: 01785920566 
-###### Email: ashrafulmijan5@gmail.com 
+Fixer Buddies [Live-Website](https://fixer-buddies.web.app/)
 
-# Live Site Link :
-[Fixer Buddies](https://fixer-buddies.web.app/)
+## Features
+ * online service booking 
+ * customer database
+ * customer review
+ * admin panel 
+
+## Front-End Technology
+ * React.js
+ * Bootstrap.js
+ * css3
+## Back-End Technology
+
+ * Node.js
+ * Express.js
+ * Mongo DB
+
+ Server Side repository [Server repo](https://github.com/Ashraful-Mijan/Fixer-Buddies-server)
