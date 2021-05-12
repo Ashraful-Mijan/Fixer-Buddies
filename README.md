@@ -1,6 +1,6 @@
 # Fixer Buddies
 
-Fixer Buddies is a single-page website where users can booking service to repair pars of laptop and desktop computer like RAM , HDD, Processor, Display Repair aaa
+Fixer Buddies is a single-page website where users can booking service to repair pars of laptop and desktop computer like RAM , HDD, Processor, Display Repair.
 
 Fixer Buddies [Live-Website](https://fixer-buddies.web.app/)
 

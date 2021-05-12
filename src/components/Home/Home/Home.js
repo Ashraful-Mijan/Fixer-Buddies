@@ -12,15 +12,15 @@ import WorkProcess from '../WorkProcess/WorkProcess';
 const Home = () => {
     return (
         <div>
-            <Header/>
-            <RepairBrands/>
-            <Services/>
-            <WorkProcess/>
-            <OurTeam/>
-            <Testimonials/>
-            <News/>
-            <Contact/>
-            <Footer/>
+            <Header />
+            <RepairBrands />
+            <Services />
+            <WorkProcess />
+            <OurTeam />
+            <Testimonials />
+            <News />
+            <Contact />
+            <Footer />
         </div>
     );
 };
